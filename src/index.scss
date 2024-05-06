@@ -4,6 +4,29 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../src/assets/fonts/OpenSansRegular.ttf');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../src/assets/fonts/OpenSansSemiBold.ttf');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
 body {
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  background: linear-gradient(#F6F7F9, #E9ECF5);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
