@@ -1,0 +1,72 @@
+.setting {
+  &__item {
+    padding: 11px 12px;
+    border-radius: 32px;
+    box-shadow:
+      -4px -2px 4px 0 #fff,
+      4px 4px 4px 0 rgba(22, 25, 36, 0.1);
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__radio {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 27px;
+  }
+
+  &__radio-item {
+    cursor: pointer;
+  }
+
+  &__radio-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    &:checked + .setting__radio-checked {
+      color: rgba(22, 25, 36, 1);
+      box-shadow:
+      inset -4px -2px 4px 0 #fff,
+      inset 4px 4px 4px 0 rgba(22, 25, 36, 0.1);
+    }
+  }
+
+  &__radio-checked {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(22, 25, 36, 0.4);
+    display: block;
+    border-radius: 32px;
+    padding: 10px 30px;
+    background-color: #EFF2F7;
+  }
+}
+
+.setting-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(#fff, #E9ECF5);
+}
