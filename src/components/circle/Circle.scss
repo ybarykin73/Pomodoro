@@ -1,0 +1,49 @@
+.circle {
+  width: 385px;
+  height: 385px;
+  border-radius: 50%;
+  padding: 106px;
+  background-color: #EFF2F7;
+  position: relative;
+  box-shadow:
+    -8px -8px 20px 0 rgba(255, 255, 255, 1),
+    8px 8px 20px rgba(22, 25, 36, 0.1),
+    inset -8px -8px 20px 0 rgba(255, 255, 255, 0.5),
+    inset 8px 8px 20px 0 rgba(22, 25, 36, 0.15);
+
+  &::after {
+    content: '';
+    width: 277px;
+    height: 277px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(137deg, #EFF2F7, rgba(201, 210, 226, 0.4));
+    box-shadow: 10px 10px 60px 0 rgba(22, 25, 36, 0.2);
+  }
+}
+
+.rectangle {
+  width: 173px;
+  height: 173px;
+  border-radius: 50%;
+  background-color: #EFF2F7;
+  position: relative;
+  z-index: 10;
+
+  &::after {
+    content: '';
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #0D8AFC, #33F0B0);
+    box-shadow: 0 0 0 12px #EFF2F7,
+    4px 4px 10px 12px rgba(22, 25, 36, 0.15);
+  }
+}
