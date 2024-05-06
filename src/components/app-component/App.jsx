@@ -1,8 +1,8 @@
+import Main from "../main/Main"
+
 const App = () => {
   return (
-    <div>
-      Hello world!
-    </div>
+    <Main />
   )
 }
 
