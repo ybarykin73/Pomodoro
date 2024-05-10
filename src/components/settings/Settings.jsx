@@ -1,12 +1,17 @@
 import React from "react"
+import { FormattedMessage } from "react-intl"
 
 import Button from "../subcomponents/button/Button"
+import LanguageContext from "../../context/languageContext"
 
+import messages from "./Settings.messages"
 import './Settings.scss'
 
 const Settings = () => {
 
   const [open, setOpen] = React.useState(false)
+
+  const { setLanguage } = React.useContext(LanguageContext)
 
   return (
     <div className="setting">
@@ -23,15 +28,15 @@ const Settings = () => {
             <div className="setting__wrapper">
               <div className="setting__item">
                 <h2 className="setting__title">
-                  Язык:
+                  <FormattedMessage {...messages.language} />
                 </h2>
                 <div className="setting__radio">
                   <label className="setting__radio-item">
-                    <input className="setting__radio-input" type="radio" name="language" defaultChecked />
+                    <input className="setting__radio-input" type="radio" onChange={() => setLanguage('ru')} name="language" defaultChecked />
                     <span className="setting__radio-checked">Rus</span>
                   </label>
                   <label className="setting__radio-item">
-                    <input className="setting__radio-input" type="radio" name="language" />
+                    <input className="setting__radio-input" type="radio" onChange={() => setLanguage('en')} name="language" />
                     <span className="setting__radio-checked">En</span>
                   </label>
                 </div>

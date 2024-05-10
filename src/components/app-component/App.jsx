@@ -1,8 +1,11 @@
+import IntlProvider from "../intl/IntlProvider"
 import Main from "../main/Main"
 
 const App = () => {
   return (
-    <Main />
+      <IntlProvider>
+        <Main />
+      </IntlProvider>
   )
 }
 
