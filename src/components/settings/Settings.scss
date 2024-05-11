@@ -1,10 +1,31 @@
 .setting {
   &__item {
-    padding: 11px 12px;
+    padding: 10px 25px;
     border-radius: 32px;
     box-shadow:
       -4px -2px 4px 0 #fff,
       4px 4px 4px 0 rgba(22, 25, 36, 0.1);
+
+      & + & {
+        margin-top: 30px;
+      }
+  }
+
+  &__item-header {
+    flex-basis: 140px;
+    text-align: center;
+  }
+  &__item-body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  &__item-subtitle {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 0;
   }
 
   &__title {
@@ -68,5 +89,13 @@
   right: 0;
   bottom: 0;
   left: 0;
+  padding: 20px 30px;
   background: linear-gradient(#fff, #E9ECF5);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
 }
