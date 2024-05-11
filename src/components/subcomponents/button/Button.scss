@@ -1,14 +1,9 @@
 .button {
-   width: 47px;
-   height: 47px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background-color: #F1F2F8;
-   border-radius: 12px;
-   box-shadow:
-    -4px -4px 4px 0 #fff,
-    4px 4px 10px 0 rgba(22, 25, 36, 0.1);
+  width: 47px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   outline: none;
   cursor: pointer;
   border: none;
@@ -16,5 +11,39 @@
 
   svg {
     fill: #0D8AFC;
+    z-index: 5;
+  }
+
+  &--base {
+    background-color: #F1F2F8;
+    border-radius: 12px;
+    box-shadow:
+     -4px -4px 4px 0 #fff,
+     4px 4px 10px 0 rgba(22, 25, 36, 0.1);
+  }
+
+  &--circle {
+    position: relative;
+    background-color: #EFF2F7;
+    border-radius: 50%;
+    box-shadow:
+      -4px -4px 4px 0 #fff,
+      8px 8px 20px 0 rgba(22, 25, 36, 0.1),
+      inset -4px -2px 4px 0 #fff,
+      inset 4px 4px 4px 0 rgba(22, 25, 36, 0.1);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      bottom: 4px;
+      left: 4px;
+      background: linear-gradient(107deg, #EFF2F7, #ececec);
+      box-shadow:
+        2px 2px 15px 0 rgba(22, 25, 36, 0.25),
+        -2px -2px 15px #fff;
+      border-radius: 50%;
+    }
   }
 }

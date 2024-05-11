@@ -3,13 +3,14 @@ import './Button.scss'
 const Button = (props) => {
 
   const {
+    style,
     onClick,
-    children
+    children,
   } = props
 
   return (
     <button
-      className='button'
+      className={['button', style  && `button--${style}`].join(' ').trim()}
       onClick={onClick}
     >
       { children }
